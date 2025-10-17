@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <excludeFolder url="file://$MODULE_DIR$/BaiTapTuan3/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/BaiTapTuan3/.idea/caches" />
+      <excludeFolder url="file://$MODULE_DIR$/BaiTapTuan3/app/build" />
+      <excludeFolder url="file://$MODULE_DIR$/Tuân1/BaiTap3/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/Tuân1/BaiTap3/.idea/caches" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

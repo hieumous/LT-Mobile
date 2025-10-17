@@ -18,7 +18,7 @@ class EmailActivity : AppCompatActivity() {
         val tvError = findViewById<TextView>(R.id.tvError)
         val btnCheck = findViewById<Button>(R.id.btnCheck)
 
-        // ✅ Khi người dùng nhấn vào EditText → tự bật bàn phím
+        //  Khi người dùng nhấn vào EditText → tự bật bàn phím
         etEmail.setOnFocusChangeListener { view, hasFocus ->
             if (hasFocus) {
                 val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
@@ -26,29 +26,29 @@ class EmailActivity : AppCompatActivity() {
             }
         }
 
-        // ✅ Khi người dùng nhấn vào EditText (trường hợp focusChange chưa gọi)
+        //  Khi người dùng nhấn vào EditText (trường hợp focusChange chưa gọi)
         etEmail.setOnClickListener {
             etEmail.requestFocus()
             val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             imm.showSoftInput(etEmail, InputMethodManager.SHOW_IMPLICIT)
         }
 
-        // 🔹 Kiểm tra email
+        //  Kiểm tra email
         btnCheck.setOnClickListener {
             val email = etEmail.text.toString().trim()
 
             tvError.setTextColor(getColor(android.R.color.holo_red_dark))
             when {
                 email.isEmpty() -> {
-                    tvError.text = "⚠️ Email không được để trống"
+                    tvError.text = " Email không được để trống"
                     tvError.visibility = TextView.VISIBLE
                 }
                 !android.util.Patterns.EMAIL_ADDRESS.matcher(email).matches() -> {
-                    tvError.text = "❌ Email không đúng định dạng"
+                    tvError.text = " Email không đúng định dạng"
                     tvError.visibility = TextView.VISIBLE
                 }
                 else -> {
-                    tvError.text = "✅ Email hợp lệ"
+                    tvError.text = " Email hợp lệ"
                     tvError.setTextColor(getColor(android.R.color.holo_green_dark))
                     tvError.visibility = TextView.VISIBLE
                 }
